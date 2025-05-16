@@ -1,5 +1,22 @@
 import { useState, useEffect, useRef } from "react";
-
+import {
+  FaJs,
+  FaJava,
+  FaCss3,
+  FaPython,
+  FaReact,
+  FaHtml5,
+  FaGithub,
+  FaNodeJs,
+} from "react-icons/fa";
+import { SiPostman } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
+import { DiMongodb } from "react-icons/di";
+import { GrMysql } from "react-icons/gr";
+import { SiSpringboot } from "react-icons/si";
+import { TbBrandReactNative } from "react-icons/tb";
+import { RiNextjsFill } from "react-icons/ri";
+import { SiTypescript } from "react-icons/si";
 export default function SkillsSection() {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -10,33 +27,111 @@ export default function SkillsSection() {
   // Skills data with categories and proficiency levels
   const skillsData = {
     languages: [
-      { name: "JavaScript", proficiency: 90 },
-      { name: "TypeScript", proficiency: 85 },
-      { name: "Java", proficiency: 80 },
-      { name: "Python", proficiency: 75 },
+      {
+        name: "JavaScript",
+        proficiency: 90,
+        icon: <FaJs className="ml-2 text-2xl" />,
+      },
+      {
+        name: "TypeScript",
+        proficiency: 85,
+        icon: <SiTypescript className="ml-2 text-2xl" />,
+      },
+      {
+        name: "Java",
+        proficiency: 80,
+        icon: <FaJava className="ml-2 text-2xl" />,
+      },
+      {
+        name: "Python",
+        proficiency: 75,
+        icon: <FaPython className="ml-2 text-2xl" />,
+      },
     ],
     frontend: [
-      { name: "React.js", proficiency: 95 },
-      { name: "HTML5", proficiency: 90 },
-      { name: "CSS3", proficiency: 90 },
-      { name: "Material-UI", proficiency: 85 },
-      { name: "Next.js", proficiency: 80 },
+      {
+        name: "React.js",
+        proficiency: 95,
+        icon: <FaReact className="ml-2 text-2xl" />,
+      },
+      {
+        name: "HTML5",
+        proficiency: 90,
+        icon: <FaHtml5 className="ml-2 text-2xl" />,
+      },
+      {
+        name: "CSS3",
+        proficiency: 90,
+        icon: <FaCss3 className="ml-2 text-2xl" />,
+      },
+      {
+        name: "Material-UI",
+        proficiency: 85,
+        icon: <FaJs className="ml-2 text-2xl" />,
+      },
+      {
+        name: "Next.js",
+        proficiency: 80,
+        icon: <RiNextjsFill className="ml-2 text-2xl" />,
+      },
     ],
     backend: [
-      { name: "Node.js", proficiency: 85 },
-      { name: "Express.js", proficiency: 85 },
-      { name: "Spring Boot", proficiency: 80 },
+      {
+        name: "Node.js",
+        proficiency: 85,
+        icon: <FaNodeJs className="ml-2 text-2xl" />,
+      },
+      {
+        name: "Express.js",
+        proficiency: 85,
+        icon: <FaNodeJs className="ml-2 text-2xl" />,
+      },
+      {
+        name: "Spring Boot",
+        proficiency: 80,
+        icon: <SiSpringboot className="ml-2 text-2xl" />,
+      },
     ],
-    mobile: [{ name: "React Native", proficiency: 90 }],
+    mobile: [
+      {
+        name: "React Native",
+        proficiency: 90,
+        icon: <TbBrandReactNative className="ml-2 text-2xl" />,
+      },
+    ],
     database: [
-      { name: "MySQL", proficiency: 85 },
-      { name: "MongoDB", proficiency: 80 },
+      {
+        name: "MySQL",
+        proficiency: 85,
+        icon: <GrMysql className="ml-2 text-2xl" />,
+      },
+      {
+        name: "MongoDB",
+        proficiency: 80,
+        icon: <DiMongodb className="ml-2 text-2xl" />,
+      },
     ],
     tools: [
-      { name: "Git", proficiency: 90 },
-      { name: "VS Code", proficiency: 95 },
-      { name: "Postman", proficiency: 90 },
-      { name: "REST APIs", proficiency: 90 },
+      {
+        name: "Git",
+        proficiency: 90,
+        icon: <FaGithub className="ml-2 text-2xl" />,
+      },
+      {
+        name: "VS Code",
+        proficiency: 95,
+        icon: <VscVscode className="ml-2 text-2xl" />,
+      },
+      {
+        name: "Postman",
+        proficiency: 90,
+        icon: <SiPostman className="ml-2 text-2xl" />,
+      },
+      {
+        name: "REST APIs",
+        proficiency: 90,
+        icon: <TbBrandReactNative className="ml-2 text-2xl" />,
+      },
     ],
   };
 
@@ -156,7 +251,10 @@ export default function SkillsSection() {
               transitionDelay: `${index * 50 + 500}ms`,
             }}
           >
-            <h3 className="text-xl font-bold mb-3 text-white">{skill.name}</h3>
+            <h3 className="text-xl font-bold mb-3 text-white inline-flex items-center">
+              {skill.name}
+              {skill.icon}
+            </h3>
 
             {/* Skill progress bar */}
             <div className="w-full h-2 bg-gray-700 rounded-full overflow-hidden">

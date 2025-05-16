@@ -187,7 +187,7 @@ export default function HeroSection() {
               <span>Contact Me</span>
             </a>
             <a
-              href="#"
+              href="https://drive.google.com/file/d/1adE5v0Stgw9QriL6cuy_n3OIXIL04iif/view?usp=sharing"
               className="flex items-center gap-2 bg-transparent border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:translate-y-1"
             >
               <span>Download CV</span>
@@ -203,7 +203,7 @@ export default function HeroSection() {
             }`}
           >
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/aryan-yadav-b81271210/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
@@ -211,7 +211,7 @@ export default function HeroSection() {
               <Linkedin size={24} />
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/alienX-o"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
